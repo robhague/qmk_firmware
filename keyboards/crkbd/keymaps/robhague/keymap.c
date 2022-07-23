@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                     XXXXXXX,  KC_LCMD, LT(1, KC_SPC),   LT(2, KC_BSPC), KC_ENT, XXXXXXX
+                                     XXXXXXX,  MO(1), LT(4, KC_SPC),   LT(5, KC_BSPC), MO(2), XXXXXXX
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -75,6 +75,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, VLK_TOG, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______,  _______,     _______, _______, _______
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  // NUM
+  [4] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      XXXXXXX, XXXXXXX, KC_PGUP,   KC_UP, KC_PGDN, KC_MINS,                      KC_PPLS,    KC_7,    KC_8,    KC_9, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      XXXXXXX,  KC_ESC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TAB,                       KC_DEL, RSFT_T(KC_4), RCMD_T(KC_5), RCTL_T(KC_6), ROPT_T(KC_0), XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      XXXXXXX, LCMD(KC_Z), LCMD(KC_X), LCMD(KC_C), LCMD(KC_V), _______,           KC_EQL,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______, _______,  _______,   KC_BSPC, _______, _______
+                                      //`--------------------------'  `--------------------------'
+  ),
+
+  // PUN
+  [5] = LAYOUT_split_3x6_3(
+  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
+      _______, LSFT(KC_1), LSFT(KC_2), LSFT(KC_3), LSFT(KC_4), LSFT(KC_5),
+                                                                               LSFT(KC_6), LSFT(KC_7), LSFT(KC_8), KC_LBRC, XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      _______, LOPT_T(KC_GRV), KC_LCTL, KC_LCMD, KC_LSFT,  KC_ESC,                 KC_SCLN, RSFT_T(KC_QUOT), RCMD_T(KC_SLSH), RCTL_T(KC_BSLS), ROPT_T(KC_RBRC), XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
+      _______, LSFT(KC_GRV), LOPT(KC_3), LSA(KC_MINS), KC_LPRN, KC_RPRN,           LSFT(KC_SCLN), LSFT(KC_QUOT), LSFT(KC_SLSH), LSFT(KC_BSLS), XXXXXXX, XXXXXXX,
+  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
+                                          _______, _______,  KC_ENT,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   )
 };
@@ -166,13 +193,15 @@ void oled_render_logo(void) {
     oled_write_P(crkbd_logo, false);
 }
 
-void oled_task_user(void) {
+bool oled_task_user(void) {
     if (is_keyboard_master()) {
         oled_render_layer_state();
         oled_render_keylog();
     } else {
         oled_render_logo();
     }
+
+    return false;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
