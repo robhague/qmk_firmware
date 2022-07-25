@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, LSFT(KC_1), LSFT(KC_2), LSFT(KC_3), LSFT(KC_4), LSFT(KC_5),
                                                                                LSFT(KC_6), LSFT(KC_7), LSFT(KC_8), KC_LBRC, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, LOPT_T(KC_GRV), KC_LCTL, KC_LCMD, KC_LSFT,  KC_ESC,                 KC_SCLN, RSFT_T(KC_QUOT), RCMD_T(KC_SLSH), RCTL_T(KC_BSLS), ROPT_T(KC_RBRC), XXXXXXX,
+      _______, LOPT_T(KC_GRV), KC_LCTL, KC_LCMD, CAPSWRD,  KC_ESC,                 KC_SCLN, RSFT_T(KC_QUOT), RCMD_T(KC_SLSH), RCTL_T(KC_BSLS), ROPT_T(KC_RBRC), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, LSFT(KC_GRV), LOPT(KC_3), LSA(KC_MINS), KC_LPRN, KC_RPRN,           LSFT(KC_SCLN), LSFT(KC_QUOT), LSFT(KC_SLSH), LSFT(KC_BSLS), XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
