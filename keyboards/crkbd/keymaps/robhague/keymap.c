@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                     XXXXXXX, MO(3), LT(1, KC_SPC),   LT(2, KC_BSPC), MO(3), XXXXXXX
+                                     XXXXXXX, MO(3), LT(1, KC_SPC),   LT(2, KC_BSPC), TO(1), XXXXXXX
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -45,13 +45,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // NUM
   [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, XXXXXXX, KC_PGUP,   KC_UP, KC_PGDN, KC_MINS,                      KC_PPLS,    KC_7,    KC_8,    KC_9, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_PGUP,   KC_UP, KC_PGDN, KC_MINS,                      KC_PPLS,    KC_7,    KC_8,    KC_9, KC_TAB, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,  KC_ESC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TAB,                       KC_DEL, RSFT_T(KC_4), RCMD_T(KC_5), RCTL_T(KC_6), ROPT_T(KC_0), XXXXXXX,
+      XXXXXXX,  KC_ESC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TAB,                      KC_PMNS, RSFT_T(KC_4), RCMD_T(KC_5), RCTL_T(KC_6), ROPT_T(KC_0), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, LCMD(KC_Z), LCMD(KC_X), LCMD(KC_C), LCMD(KC_V), _______,           KC_EQL,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX,
+      XXXXXXX, LCMD(KC_Z), LCMD(KC_X), LCMD(KC_C), LCMD(KC_V), _______,           KC_EQL,    KC_1,    KC_2,    KC_3, KC_ENT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______,  _______,   KC_BSPC, _______, _______
+                                          _______, _______,  _______,   KC_BSPC, TO(0), _______
                                       //`--------------------------'  `--------------------------'
   ),
 
