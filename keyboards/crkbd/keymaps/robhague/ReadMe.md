@@ -9,3 +9,4 @@ For more on the process of developing this layout, see the following blog posts:
 
 - [This Little Finger On My Right](http://rob.rho.org.uk/2022/02/this_little_finger.html)
 - [There's No Place Like Home-Row](http://rob.rho.org.uk/2022/03/no_place_like_home_row.html)
+- [Layout Evolution](https://rob.rho.org.uk/2023/10/layout_evolution.html)
