@@ -31,11 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      LCMD(LCTL(KC_Q)),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,             KC_Y,    KC_U,    KC_I,    KC_O, MO(4), XXXXXXX,
+      LCMD(LCTL(KC_Q)),    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,             KC_Y,    KC_U,    KC_I,    KC_O, MO(4), KC_F13,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_ESC, LOPT_T(KC_A), LCTL_T(KC_S), LCMD_T(KC_D), LSFT_T(KC_F), KC_G,      KC_H, RSFT_T(KC_J), RCMD_T(KC_K), RCTL_T(KC_L), ROPT_T(KC_P), XXXXXXX,
+      KC_ESC, LOPT_T(KC_A), LCTL_T(KC_S), LCMD_T(KC_D), LSFT_T(KC_F), KC_G,      KC_H, RSFT_T(KC_J), RCMD_T(KC_K), RCTL_T(KC_L), ROPT_T(KC_P), KC_F14,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                  LT(5, KC_N),    KC_M, KC_COMM,  KC_DOT,  KC_ENT, XXXXXXX,
+      XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                  LT(5, KC_N),    KC_M, KC_COMM,  KC_DOT,  KC_ENT, KC_F15,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                      XXXXXXX, MO(3), LT(1, KC_SPC),   LT(2, KC_BSPC), MO(5), XXXXXXX
                                       //`--------------------------'  `--------------------------'
